@@ -1,19 +1,21 @@
 import React, { useState } from "react";
 
-const addCategory = () => {
+export const AddCategory = ({ onNewCategory }) => {
   //export function for comunication with father component
-  const [InputValue, setInputValue] = useState("VALUE-1");
+  const [InputValue, setInputValue] = useState('');
 
   const onInputChange = (event) => {
     const value = event.target.value;
+    console.log(value);
     setInputValue(value);
   };
 
   const onSubmit = (event) => {
     event.preventDefault();
-    if(InputValue.trim().length <= 1) return;
-    
-  };
+    if (InputValue.trim().length <= 1) return; 
+    onNewCategory(InputValue.trim())
+
+  }; 
 
   return (
     <form onSubmit={(event) => onSubmit(event)}>
@@ -27,4 +29,4 @@ const addCategory = () => {
   );
 };
 
-export default addCategory;
+

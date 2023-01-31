@@ -21,11 +21,16 @@ For create project in react
  import GifApp
  
 ## Usage
-### 
+### change status
+## getValue
+## Get new value type function with parentComponent 
+
 
 ## Contributing
 ## 
 
 ## License
+
+
 
 [MIT]()
