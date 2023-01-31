@@ -1,9 +1,17 @@
-import React from 'react'
+import { useState } from "react";
+import AddCategory from "./components/addCategory";
 
 const GifApp = () => {
-    return (
-        <h1>Search Gif</h1>
-    )
-}
+  const [categories, setCategories] = useState(); //categories => intial var-- setCategories => set value.
+  //here created functions
 
-export default GifApp
+  return (
+    //Maqueting principal component
+    <>
+      <h1>Search Gif</h1>
+      <AddCategory />
+    </>
+  );
+};
+
+export default GifApp;
